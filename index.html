@@ -688,7 +688,7 @@ Interface.Editor = {
       "#fileDialog",
       function(evt) { 
         var file = fs.readFileSync($(this).val(), ['utf-8']);
-        file = file.split("<body>");
+        file = file.toString().split("<body>");
         console.log(file[1]);
         Interface.Editor.processFile(file[1]);
       }
