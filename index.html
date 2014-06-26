@@ -610,7 +610,7 @@ Interface.Editor = {
       str += 'panel.add( ' + child.name + ' );\n';
     }
     
-    template = template.replace('// place your script here', str);
+    template = template.toString().replace('// place your script here', str);
     
     Interface.Editor.chooseFile(
       "#saveDialog",
